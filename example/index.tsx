@@ -1,12 +1,15 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../dist/index';
+import { LionPlayer } from '../src/index';
+import { SOURCES } from '../src/constants/sources';
 
 const App = () => {
   return (
     <div>
-      <Thing />
+      <LionPlayer
+        sources={SOURCES}
+      />
     </div>
   );
 };
