@@ -38,16 +38,13 @@
   "keywords": [
     "lion-player",
     "javascript",
-    "html",
+    "react",
+    "react-video",
     "player",
-    "flash",
     "video",
-    "html5",
     "hls",
-    "html5-video",
     "dash",
-    "videojs",
-    "html5-audio"
+    "videojs"
   ],
   "devDependencies": {
     "husky": "^4.2.5",

@@ -1,5 +1,5 @@
 # lion-player
-> Open source HTML5 & Flash video player powered by VideoJS.
+> Open-source React video player powered by VideoJS
 
 [![NPM](https://img.shields.io/npm/v/lion-player.svg)](https://www.npmjs.com/package/lion-player)
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/lion-player)
