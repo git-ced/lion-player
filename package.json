@@ -29,7 +29,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@princedev/lion-player",
+  "name": "lion-player",
   "description": "Lion Player - open source HTML5 & Flash video player powered by VideoJS",
   "author": "Prince Neil Cedrick S. Castro <aws.cedi@gmail.com>",
   "module": "dist/lion-player.esm.js",
