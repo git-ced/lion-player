@@ -47,7 +47,27 @@ import { LionPlayer } from 'lion-player';
 
 ## Usage
 
-TBA
+**Video playback through Lion Player**
+```javascript
+import { LionPlayer } from 'lion-player';
+
+const SOURCES = [
+  {
+    src: 'https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8',
+    type: 'application/x-mpegURL',
+  },
+  {
+    src: 'https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd',
+    type: 'application/dash+xml',
+  }
+];
+
+export default function Player() {
+  return (
+    <LionPlayer sources={SOURCES} autoplay="muted" />
+  );
+}
+```
 
 ## Authors
 
