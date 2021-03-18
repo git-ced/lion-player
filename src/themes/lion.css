@@ -26,12 +26,16 @@
 */
 
 /* Show the controls (hidden at the start by default) */
-.video-js .vjs-control-bar,
-.vjs-big-play-button {
+.video-js .vjs-control-bar {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+/* Show the big play button (hidden at the start by default) */
+.vjs-theme-lion .vjs-big-play-button .vjs-icon-placeholder {
+  display: block;
 }
 
 .video-js {
@@ -40,6 +44,8 @@
   --vjs-theme-default--slider: rgba(255, 255, 255, 0.42);
   --vjs-theme-lion--primary: #fafafa;
   --vjs-theme-lion--secondary: #f2f2f2;
+
+  font-family: Calibri, Arial, Helvetica, sans-serif;
 
   font-size: 10px;
   color: var(--vjs-theme-default--foreground);
@@ -90,7 +96,7 @@
   height: 70px;
   background: none;
   line-height: 70px;
-  font-size: 8em;
+  font-size: 80px;
   border: none;
   top: 50%;
   left: 50%;
@@ -126,15 +132,17 @@
 
 /* Play Button */
 .vjs-theme-lion .vjs-play-control {
-  font-size: 1em;
+  font-size: 1.2em;
+  margin-top: -6px;
 }
 
-.vjs-theme-lion .vjs-play-control .vjs-icon-placeholder:before {
-  background-color: none;
+.vjs-theme-lion .vjs-play-control .vjs-icon-placeholder::before {
+  background: none;
   color: var(--vjs-theme-lion--primary);
 }
 
-.vjs-theme-lion .vjs-play-control:hover .vjs-icon-placeholder:before {
+.vjs-theme-lion .vjs-play-control:hover .vjs-icon-placeholder::before {
+  background: none;
   color: var(--vjs-theme-lion--secondary);
 }
 
@@ -192,6 +200,32 @@
   border-radius: 25em;
 }
 
+/* Menu content */
 .vjs-menu .vjs-menu-content {
-  overflow: hidden !important;
+  overflow: auto !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.vjs-menu .vjs-menu-content > * {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 0 8px 0;
+  color: var(--vjs-theme-default--foreground);
+}
+
+.js-focus-visible .vjs-menu li.vjs-selected:hover,
+.vjs-menu li.vjs-selected,
+.vjs-menu li.vjs-selected:focus,
+.vjs-menu li.vjs-selected:hover {
+  background: var(--vjs-theme-default--background);
+  color: var(--vjs-theme-default--foreground);
+}
+
+.vjs-playback-rate .vjs-menu {
+  width: 6em;
+  left: -10px;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
 }
