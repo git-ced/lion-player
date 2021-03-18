@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <LionPlayer
-        sources={SOURCES}
+        sources={[SOURCES[1]]}
       />
     </div>
   );
