@@ -25,6 +25,15 @@
   SOFTWARE.
 */
 
+/* Show the controls (hidden at the start by default) */
+.video-js .vjs-control-bar,
+.vjs-big-play-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .video-js {
   --vjs-theme-default--foreground: #fafafa;
   --vjs-theme-default--background: #5d34cb;

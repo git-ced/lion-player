@@ -16,7 +16,6 @@ export const LionPlayer = (props?: VideoJsPlayerOptions) => {
       <video
         ref={playerRef}
         className="video-js vjs-theme-lion"
-        data-setup='{}'
       >
         <p className="vjs-no-js">
           To view this video please enable JavaScript, and consider upgrading to a
