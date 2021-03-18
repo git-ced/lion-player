@@ -7,27 +7,15 @@ import { VideoJsPlayerOptions } from 'video.js';
 // ANCHOR Hooks
 import { usePlayer } from './hooks/usePlayer';
 
-const DEFAULT_OPTIONS: VideoJsPlayerOptions = {
-  controls: true,
-  autoplay: false,
-  fluid: true,
-  preload: 'auto',
-  width: 100,
-  playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
-};
-
 export const LionPlayer = (props?: VideoJsPlayerOptions) => {
-  const playerRef = usePlayer({
-    ...DEFAULT_OPTIONS,
-    ...props,
-  });
+  const playerRef = usePlayer({ ...props });
 
   return (
     <div style={{ width: '50%', height: 'auto' }}>
       <div data-vjs-player>
         <video
           ref={playerRef}
-          className="video-js vjs-big-play-centered vjs-theme-city"
+          className="video-js vjs-big-play-centered"
           data-setup='{}'
         >
           <p className="vjs-no-js">
