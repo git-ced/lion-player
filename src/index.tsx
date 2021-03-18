@@ -3,7 +3,6 @@ import React from 'react';
 
 // ANCHOR VideoJS
 import { VideoJsPlayerOptions } from 'video.js';
-import 'video.js/dist/video-js.css';
 import './themes/lion.css';
 
 // ANCHOR Hooks
@@ -16,7 +15,7 @@ export const LionPlayer = (props?: VideoJsPlayerOptions) => {
     <div data-vjs-player>
       <video
         ref={playerRef}
-        className="video-js vjs-big-play-centered vjs-theme-lion"
+        className="video-js vjs-theme-lion"
         data-setup='{}'
       >
         <p className="vjs-no-js">
