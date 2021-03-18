@@ -34,14 +34,15 @@
   "repository": "https://github.com/git-ced/lion-player.git",
   "keywords": [
     "lion-player",
+    "videojs",
+    "videojs-skin",
     "javascript",
     "react",
     "react-video",
     "player",
     "video",
     "hls",
-    "dash",
-    "videojs"
+    "dash"
   ],
   "devDependencies": {
     "@types/react": "^17.0.3",
