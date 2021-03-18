@@ -9,7 +9,7 @@
 
 ## Table of Contents
  - [Installation](#installation)
- - [Import](#import)
+ - [Setup](#setup)
  - [Usage](#usage)
  - [Authors](#authors)
  - [Changelog](#changelog)
@@ -31,7 +31,7 @@ Yarn
 $ yarn add lion-player
 ```
 
-## Import
+## Setup
 
 Start using it by importing the library first.
 
@@ -40,9 +40,18 @@ Start using it by importing the library first.
 const LionPlayer = require('lion-player');
 ```
 
+or 
+
 ### ES6
 ```javascript
 import { LionPlayer } from 'lion-player';
+```
+
+The `LyonPlayer` component requires the following CSS for styling:
+
+```html
+<link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+<link href="https://unpkg.com/lion-player@1.0.0/dist/lion-skin.min.css" rel="stylesheet">
 ```
 
 ## Usage
