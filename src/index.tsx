@@ -15,7 +15,7 @@ export const LionPlayer = (props?: VideoJsPlayerOptions) => {
     <div data-vjs-player>
       <video
         ref={playerRef}
-        className="video-js vjs-big-play-centered"
+        className="video-js vjs-big-play-centered vjs-theme-lion"
         data-setup='{}'
       >
         <p className="vjs-no-js">

@@ -1,0 +1,192 @@
+/*
+  Lion Skin for Video.js
+  http://videojs.com
+
+  MIT License
+
+  Copyright (c) 2021 Prince Neil Cedrick Castro
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+*/
+
+.video-js {
+  --vjs-theme-default--foreground: #fafafa;
+  --vjs-theme-default--background: #5d34cb;
+  --vjs-theme-default--slider: rgba(255, 255, 255, 0.42);
+
+  font-size: 10px;
+  color: var(--vjs-theme-default--foreground);
+}
+
+/* The "Big Play Button" is the play button that shows before the video plays. */
+.vjs-default-skin .vjs-big-play-button {
+  font-size: 3em;
+
+  line-height: 1.5em;
+  height: 1.5em;
+  width: 3em;
+
+  border: 0.06666em solid var(--vjs-theme-default--foreground);
+  border-radius: 0.3em;
+
+  left: 50%;
+  top: 50%;
+  margin-left: -(3em / 2);
+  margin-top: -(1.5em / 2);
+}
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+  /* IE8 - has no alpha support */
+  background-color: var(--vjs-theme-default--background);
+  background-color: rgba(var(--vjs-theme-default--background), 0.7);
+}
+
+/* Slider - used for Volume bar and Progress bar */
+.video-js .vjs-slider {
+  background-color: var(--vjs-theme-default--slider);
+}
+
+/* The slider bar color is used for the progress bar and the volume bar
+   (the first two can be removed after a fix that's coming) */
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+  background: var(--vjs-theme-default--background);
+}
+
+/* The main progress bar also has a bar that shows how much has been loaded. */
+.video-js .vjs-load-progress {
+  background: rgba(var(--vjs-theme-default--slider), 0.5);
+}
+
+/* The load progress bar also has internal divs that represent
+   smaller disconnected loaded time ranges */
+.video-js .vjs-load-progress div {
+  background: rgba(var(--vjs-theme-default--slider), 0.75);
+}
+
+/* Variable Definition */
+.vjs-theme-lion {
+  --vjs-theme-lion--primary: #fafafa;
+  --vjs-theme-lion--secondary: #f2f2f2;
+}
+
+/* Big play Button */
+.vjs-theme-lion:hover .vjs-big-play-button,
+.vjs-theme-lion .vjs-big-play-button {
+  width: 70px;
+  height: 70px;
+  background: none;
+  line-height: 70px;
+  font-size: 80px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+  color: var(--vjs-theme-lion--secondary);
+}
+
+.vjs-theme-lion:hover .vjs-big-play-button,
+.vjs-theme-lion.vjs-big-play-button:focus {
+  background-color: transparent;
+  color: var(--vjs-theme-lion--primary);
+}
+
+.vjs-theme-lion .vjs-big-play-button .vjs-icon-placeholder {
+  display: none;
+}
+
+/* Control Bar */
+.vjs-theme-lion .vjs-button > .vjs-icon-placeholder::before {
+  line-height: 1.55;
+}
+
+.vjs-theme-lion .vjs-control:not(.vjs-disabled, .vjs-time-control):hover {
+  color: var(--vjs-theme-lion--primary);
+  text-shadow: var(--vjs-theme-lion--secondary) 0 0 0;
+}
+
+.vjs-theme-lion .vjs-control-bar {
+  height: 48px;
+  padding-top: 16px;
+  background: none;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0));
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* Play Button */
+.vjs-theme-lion .vjs-play-control {
+  font-size: 1em;
+}
+
+.vjs-theme-lion .vjs-play-control .vjs-icon-placeholder:before {
+  background-color: var(--vjs-theme-lion--secondary);
+  height: 1.5em;
+  width: 1.5em;
+  margin-top: 0.2em;
+  border-radius: 1em;
+  color: var(--vjs-theme-lion--primary);
+}
+
+.vjs-theme-lion .vjs-play-control:hover .vjs-icon-placeholder:before {
+  background-color: var(--vjs-theme-lion--primary);
+  color: var(--vjs-theme-lion--secondary);
+}
+
+/* Volume stuff */
+.vjs-theme-lion .vjs-volume-panel:hover .vjs-volume-control.vjs-volume-horizontal {
+  height: 100%;
+}
+
+.vjs-theme-lion .vjs-volume-bar {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.vjs-theme-lion .vjs-volume-level {
+  background-color: var(--vjs-theme-lion--primary);
+}
+
+/* Progress Bar */
+.vjs-theme-lion .vjs-progress-control:hover .vjs-progress-holder {
+  font-size: 1em;
+}
+
+.vjs-theme-lion .vjs-play-progress::before {
+  display: none;
+}
+
+.vjs-theme-lion .vjs-progress-holder {
+  border-radius: 0.2em;
+  height: 0.5em;
+  margin: 0;
+}
+
+.vjs-theme-lion .vjs-play-progress,
+.vjs-theme-lion .vjs-load-progress,
+.vjs-theme-lion .vjs-load-progress div {
+  border-radius: 0.2em;
+}
+
+.vjs-menu .vjs-menu-content {
+  overflow: hidden !important;
+}
