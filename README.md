@@ -69,6 +69,45 @@ export default function Player() {
 }
 ```
 
+
+**List of possible props for `LionPlayer`**
+
+[LionPlayer Props Reference](https://docs.videojs.com/tutorial-options.html)
+
+```typescript
+interface Props {
+  aspectRatio?: string;
+  autoplay?: boolean | string;
+  bigPlayButton?: boolean;
+  controlBar?: videojs.ControlBarOptions | false;
+  textTrackSettings?: videojs.TextTrackSettingsOptions;
+  controls?: boolean;
+  defaultVolume?: number;
+  fluid?: boolean;
+  height?: number;
+  html5?: any;
+  inactivityTimeout?: number;
+  language?: string;
+  languages?: { [code: string]: videojs.LanguageTranslations };
+  liveui?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+  nativeControlsForTouch?: boolean;
+  notSupportedMessage?: string;
+  playbackRates?: number[];
+  plugins?: Partial<VideoJsPlayerPluginOptions>;
+  poster?: string;
+  preload?: string;
+  sourceOrder?: boolean;
+  sources?: videojs.Tech.SourceObject[];
+  src?: string;
+  techOrder?: string[];
+  tracks?: videojs.TextTrackOptions[];
+  userActions?: videojs.UserActions;
+  width?: number;
+}
+```
+
 ## Authors
 
 - [Prince Neil Cedrick Castro](https://github.com/git-ced/) - Initial work
