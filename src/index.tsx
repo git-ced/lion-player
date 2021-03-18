@@ -3,6 +3,7 @@ import React from 'react';
 
 // ANCHOR VideoJS
 import { VideoJsPlayerOptions } from 'video.js';
+import 'video.js/dist/video-js.css';
 
 // ANCHOR Hooks
 import { usePlayer } from './hooks/usePlayer';
