@@ -367,6 +367,10 @@
   -ms-overflow-style: none;
 }
 
+.vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+  padding-bottom: 32px;
+}
+
 .vjs-menu .vjs-menu-content > * {
   background: rgba(0, 0, 0, 0.42);
   padding: 8px 0 8px 0;
