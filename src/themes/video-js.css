@@ -826,7 +826,7 @@ body.vjs-full-window {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 4em;
+  width: 3.5em;
   flex: none;
 }
 
@@ -925,8 +925,8 @@ body.vjs-full-window {
 .video-js .vjs-play-progress:before {
   font-size: 0.9em;
   position: absolute;
-  right: -0.5em;
-  top: -0.3333333333em;
+  right: 0;
+  top: 0;
   z-index: 1;
 }
 
