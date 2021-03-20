@@ -93,7 +93,7 @@
 .vjs-theme-lion:hover .vjs-big-play-button,
 .vjs-theme-lion .vjs-big-play-button {
   background: none;
-  font-size: 16em;
+  font-size: 12em;
   border: none;
   top: 0;
   left: 0;
@@ -138,6 +138,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 2em;
+  margin-left: 1.8em;
+  margin-right: 0.8em;
 }
 
 .vjs-theme-lion .vjs-play-control .vjs-icon-placeholder::before {
@@ -155,6 +158,7 @@
 .vjs-button > .vjs-icon-placeholder::before,
 .vjs-modal-dialog .vjs-modal-dialog-content {
   position: inherit !important;
+  font-size: 2.5em;
 }
 
 /* Volume stuff */
@@ -173,7 +177,7 @@
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal:active,
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active {
   height: 100%;
-  width: 14em !important;
+  width: 16em !important;
 }
 
 .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
@@ -247,7 +251,7 @@
 
 /* Progress Bar */
 .vjs-theme-lion .vjs-progress-control {
-  padding: 0 1.5em 0 1.5em;
+  padding: 0 1em 0 1.5em;
   display: border-box;
   position: absolute;
   width: 100%;
@@ -331,7 +335,19 @@
   display: block;
 }
 
+/* Quality Selector */
+.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button.vjs-quality-selector {
+  margin-right: 0.4em;
+  font-size: 1.2em;
+  margin-top: -0.3em;
+}
+
 /* Playback rate */
+.vjs-playback-rate.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button {
+  margin-right: 0.8em;
+  font-size: 1.2em;
+}
+
 .vjs-theme-lion .vjs-playback-rate .vjs-playback-rate-value {
   pointer-events: none;
   font-size: 1.2em;
@@ -350,6 +366,9 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
+  width: 2em;
+  margin-right: 1.8em;
+  margin-left: 0.8em;
 }
 
 /* Menu content */
@@ -374,6 +393,12 @@
 .vjs-menu .vjs-menu-content > * {
   background: rgba(0, 0, 0, 0.42);
   padding: 8px 0 8px 0;
+  color: var(--vjs-theme-default--foreground);
+}
+
+.video-js .vjs-menu :focus:not(:focus-visible),
+.js-focus-visible .vjs-menu :focus:not(.focus-visible) {
+  background: var(--vjs-theme-default--background);
   color: var(--vjs-theme-default--foreground);
 }
 
