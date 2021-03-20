@@ -4,7 +4,22 @@ import { VideoJsPlayerOptions } from 'video.js'
 export const DEFAULT_OPTIONS: VideoJsPlayerOptions = {
   controls: true,
   controlBar: {
-    children: ['playToggle', 'volumePanel', 'currentTimeDisplay', 'timeDivider', 'durationDisplay', 'progressControl', 'liveDisplay', 'customControlSpacer', 'playbackRateMenuButton', 'chaptersButton', 'descriptionsButton', 'subsCapsButton', 'audioTrackButton', 'fullscreenToggle'],
+    children: [
+      'playToggle',
+      'volumePanel',
+      'currentTimeDisplay',
+      'timeDivider',
+      'durationDisplay',
+      'progressControl',
+      'liveDisplay',
+      'customControlSpacer',
+      'chaptersButton',
+      'descriptionsButton',
+      'subsCapsButton',
+      'audioTrackButton',
+      'playbackRateMenuButton',
+      'fullscreenToggle',
+    ],
   },
   autoplay: false,
   fluid: true,

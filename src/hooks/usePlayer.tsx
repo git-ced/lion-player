@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 // ANCHOR VideoJS
 import VIDEOJS, { VideoJsPlayerOptions } from 'video.js'
 import videoJsContribQualityLevels from 'videojs-contrib-quality-levels'
-import videojsHlsQualitySelector from 'videojs-hls-quality-selector'
+import videoJsHlsQualitySelector from 'videojs-hls-quality-selector'
 
 // ANCHOR Utils
 import { HOTKEYS_HANDLER } from '../utils/hotkeys-handler';
@@ -17,7 +17,7 @@ export function usePlayer(options: VideoJsPlayerOptions) {
 
   useEffect(() => {
     VIDEOJS.registerPlugin('qualityLevel', videoJsContribQualityLevels)
-    VIDEOJS.registerPlugin('hlsQualitySelector', videojsHlsQualitySelector)
+    VIDEOJS.registerPlugin('hlsQualitySelector', videoJsHlsQualitySelector)
 
     const vjsPlayer = videoRef.current
       ? VIDEOJS(videoRef.current, {
