@@ -4,9 +4,7 @@ import { VideoJsPlayerOptions } from 'video.js'
 export const DEFAULT_OPTIONS: VideoJsPlayerOptions = {
   controls: true,
   controlBar: {
-    volumePanel: {
-      inline: false
-    }
+    children: ['playToggle', 'volumePanel', 'currentTimeDisplay', 'timeDivider', 'durationDisplay', 'progressControl', 'liveDisplay', 'customControlSpacer', 'playbackRateMenuButton', 'chaptersButton', 'descriptionsButton', 'subsCapsButton', 'audioTrackButton', 'fullscreenToggle'],
   },
   autoplay: false,
   fluid: true,
