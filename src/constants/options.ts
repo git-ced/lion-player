@@ -23,6 +23,7 @@ export const DEFAULT_OPTIONS: VideoJsPlayerOptions = {
   },
   autoplay: false,
   fluid: true,
+  inactivityTimeout: 2500,
   preload: 'auto',
   width: 100,
   playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 2],
