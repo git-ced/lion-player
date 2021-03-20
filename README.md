@@ -49,9 +49,14 @@ import { LionPlayer } from 'lion-player';
 
 The `LyonPlayer` component requires the following CSS for styling:
 
+**Using link tags**
 ```html
-<link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
-<link href="https://unpkg.com/lion-player@1.0.0/dist/lion-skin.min.css" rel="stylesheet">
+<link href="https://unpkg.com/lion-player@1.1.0/dist/lion-skin.min.css" rel="stylesheet">
+```
+
+**Using import**
+```javascript
+import 'lion-player/dist/lion-skin.min.css';
 ```
 
 ## Usage
