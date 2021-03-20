@@ -176,44 +176,56 @@
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-hover,
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal:active,
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active {
-  height: 100%;
-  width: 16em !important;
+  width: auto !important;
 }
 
 .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
-  height: 100% !important;
-  display: flex;
-  margin-right: 0.2em;
-  align-items: center;
-  justify-content: center;
+  display: none !important;
 }
 
-.video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal,
-.video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal,
-.video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-horizontal,
-.video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-horizontal,
-.video-js .vjs-volume-panel.vjs-hover .vjs-mute-control ~ .vjs-volume-control.vjs-volume-horizontal,
-.video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal {
-  width: 8em !important;
-  height: 100% !important;
-  margin-right: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@media only screen and (min-width: 768px) {
+  .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-hover,
+  .video-js .vjs-volume-panel.vjs-volume-panel-horizontal:active,
+  .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active {
+    height: 100%;
+    width: 16em !important;
+  }
 
-.vjs-slider-horizontal .vjs-volume-level::before {
-  top: -0.38em;
-  right: -0.5em;
+  .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
+    height: 100% !important;
+    display: flex !important;
+    margin-right: 0.2em !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal,
+  .video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal,
+  .video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-horizontal,
+  .video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-horizontal,
+  .video-js .vjs-volume-panel.vjs-hover .vjs-mute-control ~ .vjs-volume-control.vjs-volume-horizontal,
+  .video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal {
+    width: 8em !important;
+    height: 100% !important;
+    margin-right: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vjs-slider-horizontal .vjs-volume-level::before {
+    top: -0.38em;
+    right: -0.5em;
+  }
+
+  .vjs-volume-bar.vjs-slider-horizontal {
+    width: 8em !important;
+  }
 }
 
 .video-js .vjs-volume-level::before {
   position: absolute;
   font-size: 18px;
-}
-
-.vjs-volume-bar.vjs-slider-horizontal {
-  width: 8em !important;
 }
 
 .vjs-theme-lion .vjs-volume-bar {
@@ -324,12 +336,28 @@
   margin-top: 0;
 }
 
-.vjs-time-divider {
-  padding-left: 4px !important;
-  padding-right: 4px !important;
-  min-width: 0px !important;
+.vjs-duration-display {
+  display: none !important;
 }
 
+.vjs-time-divider {
+  display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .vjs-duration-display {
+    display: block !important;
+  }
+
+  .vjs-time-divider {
+    display: block !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    min-width: 0px !important;
+  }
+}
+
+/* Control Spacer */
 .video-js .vjs-custom-control-spacer {
   width: 100%;
   display: block;
@@ -337,15 +365,28 @@
 
 /* Quality Selector */
 .vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button.vjs-quality-selector {
-  margin-right: 0.4em;
-  font-size: 1.2em;
-  margin-top: -0.3em;
+  font-size: 1em;
+  margin-top: -0.1em;
 }
 
 /* Playback rate */
 .vjs-playback-rate.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button {
-  margin-right: 0.8em;
-  font-size: 1.2em;
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Quality Selector */
+  .vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button.vjs-quality-selector {
+    margin-right: 0.4em;
+    font-size: 1.2em;
+    margin-top: -0.3em;
+  }
+
+  /* Playback rate */
+  .vjs-playback-rate.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button {
+    margin-right: 0.8em;
+    font-size: 1.2em;
+  }
 }
 
 .vjs-theme-lion .vjs-playback-rate .vjs-playback-rate-value {
