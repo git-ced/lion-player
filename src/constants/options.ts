@@ -20,6 +20,9 @@ export const DEFAULT_OPTIONS: VideoJsPlayerOptions = {
       'playbackRateMenuButton',
       'fullscreenToggle',
     ],
+    progressControl: {
+      seekBar: true
+    }
   },
   autoplay: false,
   fluid: true,
