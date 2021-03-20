@@ -2,7 +2,8 @@
 import React from 'react';
 
 // ANCHOR VideoJS
-import { VideoJsPlayerOptions } from 'video.js';
+import { VideoJsPlayerOptions, } from 'video.js';
+import './themes/video-js.css';
 import './themes/lion.css';
 
 // ANCHOR Hooks
