@@ -51,7 +51,7 @@ The `LyonPlayer` component requires the following CSS for styling:
 
 **Using link tags**
 ```html
-<link href="https://unpkg.com/lion-player@1.1.2/dist/lion-skin.min.css" rel="stylesheet">
+<link href="https://unpkg.com/lion-player@1.1.3/dist/lion-skin.min.css" rel="stylesheet">
 ```
 
 **Using import**
