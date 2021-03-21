@@ -47,7 +47,7 @@ or
 import { LionPlayer } from 'lion-player';
 ```
 
-The `LyonPlayer` component requires the following CSS for styling:
+The `LionPlayer` component requires the following CSS for styling:
 
 **Using link tags**
 ```html
