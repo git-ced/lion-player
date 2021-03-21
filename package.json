@@ -18,7 +18,8 @@
     "prepare": "tsdx build"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "@types/video.js": "^7.3.15"
   },
   "prettier": {
     "printWidth": 80,
