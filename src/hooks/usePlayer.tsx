@@ -41,6 +41,7 @@ export function usePlayer(options: VideoJsPlayerOptions) {
 
     return () => {
       if (vjsPlayer) {
+        videoRef.current = null;
         vjsPlayer.dispose();
       }
     };
