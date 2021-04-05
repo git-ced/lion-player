@@ -18,7 +18,9 @@ export function usePlayer(options: VideoJsPlayerOptions) {
   useEffect(() => {
     VIDEOJS.registerPlugin('qualityLevel', videoJsContribQualityLevels)
     VIDEOJS.registerPlugin('hlsQualitySelector', videoJsHlsQualitySelector)
+  }, [])
 
+  useEffect(() => {
     const vjsPlayer = videoRef.current
       ? VIDEOJS(videoRef.current, {
         ...DEFAULT_OPTIONS,
@@ -35,17 +37,19 @@ export function usePlayer(options: VideoJsPlayerOptions) {
           } else if (options.src) {
             vjsPlayer.src(options.src)
           }
+
+          vjsPlayer.currentTime(0);
+          vjsPlayer.load();
         }
       })
       : null;
 
     return () => {
       if (vjsPlayer) {
-        videoRef.current = null;
-        vjsPlayer.dispose();
+        vjsPlayer.reset();
       }
     };
-  }, []);
+  }, [options]);
 
   return videoRef;
 };
