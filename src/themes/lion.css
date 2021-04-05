@@ -263,7 +263,7 @@
 
 /* Progress Bar */
 .vjs-theme-lion .vjs-progress-control {
-  padding: 0 1em 0 1.5em;
+  padding: 1em 1em 1em 1.5em;
   display: border-box;
   position: absolute;
   width: 100%;
@@ -279,12 +279,12 @@
 
 .vjs-theme-lion .vjs-play-progress::before {
   display: block;
-  width: 4px;
-  height: 5.8749px;
+  width: 6px;
+  height: 5px;
   content: "";
   border-radius: 5em;
   background: var(--vjs-theme-default--foreground);
-  margin-right: -4px;
+  margin-right: -3px;
   transition: 0.1s;
 }
 
@@ -297,7 +297,7 @@
   background: var(--vjs-theme-default--foreground);
   transition: 0.3s;
   margin-right: -1em;
-  margin-top: -0.5em;
+  margin-top: -0.6em;
 }
 
 .vjs-theme-lion .vjs-progress-holder {
