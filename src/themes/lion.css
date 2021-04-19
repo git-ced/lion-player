@@ -460,7 +460,3 @@
 .vjs-menu-button-popup .vjs-button .vjs-icon-placeholder {
   font-size: 1.2em;
 }
-
-::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-}
