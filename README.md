@@ -82,7 +82,33 @@ export default function Player() {
   );
 }
 ```
+**Uncontrolled Lion Player**
+```javascript
+import { UncontrolledLionPlayer } from 'lion-player';
+import { usePlayer } from 'lion-player/dist/hooks/usePlayer';
 
+const SOURCES = [
+  {
+    src: 'https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8',
+    type: 'application/x-mpegURL',
+  },
+  {
+    src: 'https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd',
+    type: 'application/dash+xml',
+  }
+];
+
+export default function Player() {
+  const { ref } = usePlayer({ 
+    sources: SOURCES,
+    muted: true,
+  });
+
+  return (
+    <UncontrolledLionPlayer playerRef={SOURCES} />
+  );
+}
+```
 
 **List of possible props for `LionPlayer`**
 
