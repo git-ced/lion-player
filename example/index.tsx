@@ -1,13 +1,19 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { LionPlayer } from '../src/index';
+import { LionPlayer, UncontrolledLionPlayer } from '../src/index';
 import { SOURCES } from '../src/constants/sources';
+import { usePlayer } from '../src/hooks/usePlayer';
 
 const App = () => {
   const [currentSource, setCurrentSource] = React.useState(SOURCES[1]);
+  const { ref } = usePlayer({
+    sources: [SOURCES[1]]
+  });
+
   return (
     <div>
+      <h1>Default</h1>
       <LionPlayer
         sources={[SOURCES[1]]}
       />
@@ -25,6 +31,8 @@ const App = () => {
       }}>
         Original Video
       </button>
+      <h1>Uncontrolled Player</h1>
+      <UncontrolledLionPlayer playerRef={ref} />
     </div>
   );
 };
