@@ -26,7 +26,7 @@ describe('render uncontrolled Lion Player', () => {
     const div = document.createElement('div');
     const playerRef = React.createRef<HTMLVideoElement>();
 
-    ReactDOM.render(<UncontrolledLionPlayer player={playerRef} />, div);
+    ReactDOM.render(<UncontrolledLionPlayer playerRef={playerRef} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

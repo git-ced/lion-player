@@ -10,14 +10,14 @@ import './themes/lion.css';
 import { usePlayer } from './hooks/usePlayer';
 
 export interface IUncontrolledPlayerProps {
-  player: React.LegacyRef<HTMLVideoElement>
+  playerRef: React.LegacyRef<HTMLVideoElement>
 }
 
-export const UncontrolledLionPlayer = ({ player }: IUncontrolledPlayerProps) => {
+export const UncontrolledLionPlayer = ({ playerRef }: IUncontrolledPlayerProps) => {
   return (
     <div data-vjs-player>
       <video
-        ref={player}
+        ref={playerRef}
         className="video-js vjs-theme-lion"
       >
         <p className="vjs-no-js">
@@ -31,7 +31,7 @@ export const UncontrolledLionPlayer = ({ player }: IUncontrolledPlayerProps) => 
 };
 
 export const LionPlayer = (props?: VideoJsPlayerOptions) => {
-  const playerRef = usePlayer({ ...props });
+  const { ref } = usePlayer({ ...props });
 
-  return <UncontrolledLionPlayer player={playerRef} />;
+  return <UncontrolledLionPlayer playerRef={ref} />;
 };
