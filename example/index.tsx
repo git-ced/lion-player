@@ -1,9 +1,8 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { LionPlayer, UncontrolledLionPlayer } from '../src/index';
+import { LionPlayer, UncontrolledLionPlayer, usePlayer } from '../src/index';
 import { SOURCES } from '../src/constants/sources';
-import { usePlayer } from '../src/hooks/usePlayer';
 
 const App = () => {
   const [currentSource, setCurrentSource] = React.useState(SOURCES[1]);

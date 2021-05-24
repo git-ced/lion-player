@@ -84,8 +84,7 @@ export default function Player() {
 ```
 **Uncontrolled Lion Player**
 ```javascript
-import { UncontrolledLionPlayer } from 'lion-player';
-import { usePlayer } from 'lion-player/dist/hooks/usePlayer';
+import { UncontrolledLionPlayer, usePlayer } from 'lion-player';
 
 const SOURCES = [
   {

@@ -13,6 +13,8 @@ export interface IUncontrolledPlayerProps {
   playerRef: React.LegacyRef<HTMLVideoElement>
 }
 
+export { usePlayer } from './hooks/usePlayer';
+
 export const UncontrolledLionPlayer = ({ playerRef }: IUncontrolledPlayerProps) => {
   return (
     <div data-vjs-player>
@@ -35,3 +37,4 @@ export const LionPlayer = (props?: VideoJsPlayerOptions) => {
 
   return <UncontrolledLionPlayer playerRef={ref} />;
 };
+
