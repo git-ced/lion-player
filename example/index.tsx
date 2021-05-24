@@ -13,14 +13,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>Default</h1>
-      <LionPlayer
-        sources={[SOURCES[1]]}
-      />
+      <h1>Default Usage</h1>
+      <LionPlayer sources={[SOURCES[1]]} />
       <h1>Changing Sources</h1>
-      <LionPlayer
-        sources={[currentSource]}
-      />
+      <LionPlayer sources={[currentSource]} />
       <button onClick={() => {
         setCurrentSource(SOURCES[0])
       }}>
