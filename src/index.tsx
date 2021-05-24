@@ -9,9 +9,11 @@ import './themes/lion.css';
 // ANCHOR Hooks
 import { usePlayer } from './hooks/usePlayer';
 
-export const LionPlayer = (props?: VideoJsPlayerOptions) => {
-  const playerRef = usePlayer({ ...props });
+export interface IUncontrolledPlayerProps {
+  playerRef: React.LegacyRef<HTMLVideoElement>
+}
 
+export const UncontrolledLionPlayer = ({ playerRef }: IUncontrolledPlayerProps) => {
   return (
     <div data-vjs-player>
       <video
@@ -26,4 +28,10 @@ export const LionPlayer = (props?: VideoJsPlayerOptions) => {
       </video>
     </div>
   )
+};
+
+export const LionPlayer = (props?: VideoJsPlayerOptions) => {
+  const { ref } = usePlayer({ ...props });
+
+  return <UncontrolledLionPlayer playerRef={ref} />;
 };
