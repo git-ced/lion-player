@@ -27,3 +27,24 @@ export const LionPlayer = (props?: VideoJsPlayerOptions) => {
     </div>
   )
 };
+
+export interface IUncontrolledPlayerProps {
+  ref: React.LegacyRef<HTMLVideoElement>
+}
+
+export const UncontrolledLionPlayer = ({ ref }: IUncontrolledPlayerProps) => {
+  return (
+    <div data-vjs-player>
+      <video
+        ref={ref}
+        className="video-js vjs-theme-lion"
+      >
+        <p className="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video
+          </a>
+        </p>
+      </video>
+    </div>
+  )
+};
