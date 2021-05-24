@@ -1,8 +1,8 @@
 // ANCHOR React
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // ANCHOR VideoJS
-import VIDEOJS, { VideoJsPlayerOptions } from 'video.js'
+import VIDEOJS, { VideoJsPlayer, VideoJsPlayerOptions } from 'video.js'
 import videoJsContribQualityLevels from 'videojs-contrib-quality-levels'
 import videoJsHlsQualitySelector from 'videojs-hls-quality-selector'
 
@@ -13,7 +13,8 @@ import { HOTKEYS_HANDLER } from '../utils/hotkeys-handler';
 import { DEFAULT_OPTIONS } from '../constants/options';
 
 export function usePlayer(options: VideoJsPlayerOptions) {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const ref = useRef<HTMLVideoElement | null>(null);
+  const [player, setPlayer] = useState<VideoJsPlayer | null>(null)
 
   useEffect(() => {
     VIDEOJS.registerPlugin('qualityLevel', videoJsContribQualityLevels)
@@ -21,8 +22,8 @@ export function usePlayer(options: VideoJsPlayerOptions) {
   }, [])
 
   useEffect(() => {
-    const vjsPlayer = videoRef.current
-      ? VIDEOJS(videoRef.current, {
+    const vjsPlayer = ref.current
+      ? VIDEOJS(ref.current, {
         ...DEFAULT_OPTIONS,
         ...options,
         userActions: {
@@ -32,6 +33,8 @@ export function usePlayer(options: VideoJsPlayerOptions) {
         },
       }, () => {
         if (vjsPlayer) {
+          setPlayer(vjsPlayer);
+
           if (options.sources) {
             vjsPlayer.src(options.sources);
           } else if (options.src) {
@@ -51,5 +54,8 @@ export function usePlayer(options: VideoJsPlayerOptions) {
     };
   }, [options]);
 
-  return videoRef;
+  return {
+    ref,
+    player,
+  };
 };
