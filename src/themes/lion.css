@@ -93,7 +93,7 @@
 .vjs-theme-lion:hover .vjs-big-play-button,
 .vjs-theme-lion .vjs-big-play-button {
   background: none;
-  font-size: 6vw;
+  font-size: 32px;
   border: none;
   top: 0;
   left: 0;
@@ -169,11 +169,13 @@
   top: -0.5em;
   left: -0.38em;
 }
-
-.vjs-theme-lion .vjs-control .vjs-volume-horizontal {
-  background-color: transparent;
-}
 */
+
+.video-js .vjs-volume-panel {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-hover,
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal:active,
 .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active {
