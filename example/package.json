@@ -1,11 +1,12 @@
 {
   "name": "example",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "dist/index.html",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "prebuild": "rm -rf dist",
+    "start": "yarn run prebuild && parcel index.html",
+    "build": "parcel build index.html --dist-dir dist",
     "login": "netlify login",
     "deploy": "parcel build index.html && netlify deploy",
     "deploy:prod": "netlify deploy --prod"
