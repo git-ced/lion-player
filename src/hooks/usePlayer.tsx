@@ -12,7 +12,9 @@ import { HOTKEYS_HANDLER } from '../utils/hotkeys-handler';
 // ANCHOR Constants
 import { DEFAULT_OPTIONS } from '../constants/options';
 
-export function usePlayer(options: VideoJsPlayerOptions) {
+export default function usePlayer(
+  options: VideoJsPlayerOptions,
+) {
   const ref = useRef<HTMLVideoElement | null>(null);
   const [player, setPlayer] = useState<VideoJsPlayer | null>(null)
 
